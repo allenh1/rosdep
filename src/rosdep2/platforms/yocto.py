@@ -30,15 +30,13 @@
 
 import subprocess
 
-from .pip import PIP_INSTALLER
-from .source import SOURCE_INSTALLER
 from ..core import rd_debug
 from ..installers import Installer
-from ..shell_utils import read_stdout
 
 # TODO(allenh1): add OS_YOCTO to rospkg
 OS_YOCTO = 'yocto'
 YOCTO_INSTALLER = 'yocto'
+
 
 def register_installers(context):
     context.set_installer(YOCTO_INSTALLER, YoctoInstaller())
